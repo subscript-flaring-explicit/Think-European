@@ -34,7 +34,7 @@ fig = px.line(last_year, x='Date', y='Euro-super 95 (zł) za litr', title='Cena 
 fig.update_xaxes(title_text="Czas")
 
 ## add footer at the right bottom of plotly chart: fig.update_layout(annotations=[dict(xref='paper', yref='paper', x=1, y=1, xanchor='right', yanchor='bottom', text='Data z dnia 24 lutego 2020r.', font_size=12, showarrow=False)])
-fig.update_layout(annotations=[dict(x=1, y=0, showarrow=False, text="Źródło danych: Weekly Oil Bulletin - UE<br>opracowanie: thinkeuropean.org", xref="paper", yref="paper", xanchor='right', yanchor='bottom')])
+fig.update_layout(annotations=[dict(x=1, y=0, showarrow=False, text="Źródło danych: Weekly Oil Bulletin - UE<br>opracowanie: <a href=”https://thinkeuropean.org/”>Think European</a>", xref="paper", yref="paper", xanchor='right', yanchor='bottom', align = 'right')])
 
 # add vertical line to plotly chart:
 # fig.add_vline(x = "2022-02-24")
