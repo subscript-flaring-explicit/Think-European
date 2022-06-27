@@ -38,7 +38,7 @@ fig.update_layout(annotations=[dict(x=1, y=0, showarrow=False, text="Źródło d
 
 # add vertical line to plotly chart:
 # fig.add_vline(x = "2022-02-24")
-fig.add_vrect(x0="2022-02-24", x1="2022-06-06", annotation_text="Agresja rosyjska", annotation_position="top left", fillcolor="red", opacity=0.25, line_width=0)
+fig.add_vrect(x0="2022-02-24", x1="2022-06-06", annotation_text="Agresja rosyjska", annotation_position="top right", fillcolor="red", opacity=0.25, line_width=0)
 
 ## add custom logo: 
 fig.add_layout_image(
