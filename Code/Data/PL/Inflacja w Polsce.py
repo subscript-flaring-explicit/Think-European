@@ -5,6 +5,7 @@ from dbnomics import fetch_series
 ## import deepl API
 import deepl
 
+# initialize deepl API
 translator = deepl.Translator('5735d7e3-113a-8810-a9d6-dbb4a7e30cc2:fx')
 
 # result = translator.translate_text("{}".format(), target_lang="EN-US")
