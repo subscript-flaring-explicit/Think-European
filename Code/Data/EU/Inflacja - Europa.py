@@ -11,7 +11,7 @@ from xarray import align
 import deepl
 
 ## initialize deepl API
-translator = deepl.Translator('5735d7e3-113a-8810-a9d6-dbb4a7e30cc2:fx')
+translator = deepl.Translator('ef10af44-f658-5c9d-f3b0-0c1e0f4b2e6c:fx')
 
 dfs = []
 
@@ -221,6 +221,9 @@ df_all = pd.concat(dfs)
 df_all['series_id'] = translator.translate_text(df_all.series_id, target_lang='pl', formality= 'less')
 df_all['series_id'] = df_all.series_id.apply(lambda x: x.text)
 
+# order series_id alphabetically: df_all.sort_values(by=['series_id'], inplace=True, ascending=True)
+df_all.sort_values(by=['series_id'], ascending=True)
+
 # create figure for all countries
 fig = px.line(df_all, x="period", y="value", color="series_id", title="Inflacja w wybranych krajach Europy")
 
@@ -263,4 +266,4 @@ fig.add_layout_image(
 fig.show()
 
 # save figure to html with minified size: fig.write_html("inflacja_europy.html", include_plotlyjs="cdn")
-fig.write_html("/home/gr00stl/Documents/Git/Think-European/Think-European/Data/EU/Inflacja_Europy.html", include_plotlyjs="cdn")
+fig.write_html("/home/gr00stl/Documents/Git/Think-European/Think-European/Data/EU/Inflacja w krajach Europy.html", include_plotlyjs="cdn")
