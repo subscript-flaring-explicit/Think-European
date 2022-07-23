@@ -11,7 +11,7 @@ from xarray import align
 import deepl
 
 ## initialize deepl API
-translator = deepl.Translator('ef10af44-f658-5c9d-f3b0-0c1e0f4b2e6c:fx')
+translator = deepl.Translator('47c6c989-9eaa-5b30-4ee6-b2e4f1ebd530:fx')
 
 dfs = []
 
